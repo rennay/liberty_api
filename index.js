@@ -14,9 +14,9 @@ var mysql = require('mysql');
 
 const port = 3000;
 
-const DB_HOST = 'imahudo-1.cgs2gse1hjxz.us-east-1.rds.amazonaws.com';
-const DB_USER = 'admin';
-const DB_PASSWORD = 'Imahudo001!'
+const DB_HOST = process.env.DB_HOST;
+const DB_USER = process.env.DB_USER;
+const DB_PASSWORD = process.env.DB_PASSWORD;
 
 const con = mysql.createConnection({
   host: DB_HOST,
